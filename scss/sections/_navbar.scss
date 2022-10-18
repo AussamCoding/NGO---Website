@@ -1,0 +1,35 @@
+@use'../custom' as *;
+@use'../components/mixins' as *;
+
+.menu {
+  @include gradient;
+  z-index: 10000;
+
+
+  li {
+    padding: 0 0.7rem;
+  }
+
+  a {
+    color: $white ;
+    text-transform: uppercase;
+    font-weight: 600;
+    white-space: nowrap;
+    letter-spacing: 0.6px;
+  }
+
+
+
+
+
+}
+
+
+.active {
+  color: rgba($white, .75) !important;
+}
+
+
+// .logo img {
+//   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+// }

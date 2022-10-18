@@ -1,0 +1,95 @@
+@use'../custom' as *;
+@use'../components/mixins' as *;
+
+.btn-rounded.con {
+  @include media-breakpoint-down(xl) {
+    display: none;
+  }
+}
+
+.con-btn {
+  @include media-breakpoint-down(md) {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  margin-top: 1.5rem;
+}
+
+
+.btn-rounded {
+
+
+  position: relative;
+  padding: 0.9375rem 4.375rem 0.9375rem 1.25rem;
+  font-weight: 700;
+  margin: 0;
+  border: 0.1rem solid rgba($white, 0.6);
+  background-color: $white;
+
+
+
+  span {
+    position: absolute;
+    background-color: $secondary;
+    width: 2.5rem;
+    height: 2.5rem;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    color: $white;
+
+
+
+    i {
+      color: $white;
+      font-size: 1rem;
+      line-height: 2.5rem;
+    }
+
+
+  }
+
+
+  &:hover {
+    @include gradient;
+    color: $white;
+
+
+    span:not(.exclude) {
+      background-color: rgba($black, 0.6);
+    }
+
+
+    .exclude {
+      background-color: (rgba($white, 0.6));
+    }
+
+  }
+
+
+
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  width: 4rem;
+  height: 4rem;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+
+}
+
+#myBtn:hover {
+  opacity: 0.8;
+}

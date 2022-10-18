@@ -1,0 +1,45 @@
+@use'../custom' as *;
+@use'../components/mixins' as *;
+
+
+.intro-section {
+  @include gradient;
+  padding: 3.5rem 0 0 0;
+  width: 100%;
+  height: 100%;
+
+  .heart {
+
+    // animation: <animation-name> <animation-duration> <animation-iteration-count>
+    animation: animateHeart 2s infinite;
+  }
+
+}
+
+@keyframes animateHeart {
+
+  // scale down and scale up faster in irregular intervals to get the throbbing effect
+  0% {
+    transform: scale(0.8);
+  }
+
+  5% {
+    transform: scale(0.9);
+  }
+
+  10% {
+    transform: scale(0.8);
+  }
+
+  15% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    transform: scale(0.8);
+  }
+}
